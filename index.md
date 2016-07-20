@@ -21,7 +21,7 @@ lidR provides an open-source and R-based implementation of the main functions fr
 - [Retrieve indiviual pulses](loadLidar.html#dynamically-computed-field)
 - [Retrieve individual flightlines](loadLidar.html#dynamically-computed-fields)
 - [Compute a digital canopy model](canopy.html)
-- Compute any set of metrics on a cloud of points
+- Compute any set of metrics on a cloud of pointsan
 - [Rasterize and apply any function to compute a set of metrics using an area-based approach](gridMetrics.html)
 - [Classify and filter data from geographic shapefiles](classifyFromShapefile.html)
 - [Filter a cloud of points based on any condition test](extract.html)
