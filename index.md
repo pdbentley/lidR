@@ -22,11 +22,11 @@ lidR provides an open-source and R-based implementation of the main functions fr
 - [Retrieve individual flightlines](loadLidar.html#dynamically-computed-fields)
 - [Compute a digital canopy model](canopy.html)
 - Compute any set of metrics on a cloud of points
-- Rasterize and apply any function to compute a set of metrics using an area-based approach
+- [Rasterize and apply any function to compute a set of metrics using an area-based approach](gridMetrics.html)
 - [Classify and filter data from geographic shapefiles](classifyFromShapefile.html)
 - [Filter a cloud of points based on any condition test](extract.html)
 - Thin a cloud of points to reach an homogeneous point density
-- Clip data based on discs, rectangles or polygons.
+- [Clip data based on discs, rectangles or polygons](clip.html)
 - Compute point and pulse densities
 - Manage a catalog of `.las` tiles
 - Extract automatically a set of ground plot inventories (even plots falling between two or more tiles)
