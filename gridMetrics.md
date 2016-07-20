@@ -4,27 +4,36 @@ title: Compute a series of descriptive statistics
 ---
 
 The `gridMetrics` function makes rasters (cells) and enables computation of one or more metrics for each cell.
-The size of the cells is given by the parameter `resolution`. The cell area is the square of the resolution. The desired metric is given by an expression in the parameter `func`. The `gridMetrics` function returns a `gridMetrics` object.
+The size of the cells is given by the parameter `res` (for resolution). The cell area is the square of the resolution. The desired metric is given by an expression in the parameter `func`. The `gridMetrics` function returns a `gridMetrics` object.
 
 ## Grid one metric
 
-[`canopyModel`](canopy.html) was an alias for:
-
-    canopy = lidar %>% gridMetrics(2, max(Z))
-
-`pulseDensity` was an alias for:
-
-    pulseDensity = lidar %>% gridMetrics(3, length(unique(pulseID))/9)
-
-Compute the mean height for 400 m^2 plots
+The following code enable to compute the mean height of the returns in each automatically computed 400 square meters cells.
 
     hmean = lidar %>% gridMetrics(20, mean(Z))
+    plot(hmean)
+    
+ ![](images/gridMetrics-mean.jpg)
+ 
+Several functions provided by the package correspond to a `gridMetrics` alias.
+
+[`canopyModel`](canopy.html) is an alias for:
+
+    canopy = lidar %>% gridMetrics(2, max(Z))
+    plot(canopy)
+    
+![](images/gridMetrics-canopy.jpg)
+
+`pulseDensity` is an alias for:
+
+    density = lidar %>% gridMetrics(4, length(unique(pulseID))/16)
 
 Some functions are already available in the package, for example `entropy` or `vci`
 
     entropy = lidar %>% gridMetrics(20, entropy(Z))
     vci     = lidar %>% gridMetrics(20, vci(Z, zmax = 40))
-
+    
+The user can use its own functions
 
 ## Grid multiple metrics
 
@@ -45,7 +54,7 @@ When we want to compute several metrics we would like to compute each metric at 
       return(ret)
     }
     
-The about page [common miss usage of gridMetrics](gridMetrics-error.html) provides further details on how this function works.
+The about page [common miss usage of gridMetrics](gridMetrics-error.html) provides further details on how to write a proper function. An internal system check the output of the user's function before to run the `gridMetrics` funtion.
 
 ### Use your own function in gridMetrics
 
@@ -67,5 +76,5 @@ The function `cloudMetrics` works exactly like `gridMetrics` but it does not hav
 
 The previous sections showed how to efficiently process a dataset. It returns a list of plots with the associated metrics. But some plots fall in water and the algorithm cannot guess that. Some plots are incomplete because they fall at the edge of the file or the edge of a flightline, or in this edge of a void area (providers removed some data), or for other good reasons. The algorithm makes cells but it does not control what was in the cells. You can control the quality of cells in two ways:
 
-- Using quality metrics
-- Filtering data based on shapefiles
+- [Using quality metrics](gridMetrics-control.html)
+- [Filtering data based on shapefiles](classifyFromShapefile.html)

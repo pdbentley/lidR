@@ -3,7 +3,7 @@ layout: default
 title: Advanced used of gridMetrics
 ---
 
-gridMetrics returns a list of plots with the associated metrics. But some plots fall in water and the algorithm cannot guess that. Some plots are incomplete because they fall at the edge of the file or the edge of a flightline, or at the edge of a void area (providers removed some data), or for other reasons. The algorithm makes cells but it does not control what is in the cells. You can control the quality of cells in two ways.
+`gridMetrics` returns a list of plots with the associated metrics. But some plots fall in water and the algorithm cannot guess that. Some plots are incomplete because they fall at the edge of the file or the edge of a flightline, or at the edge of a void area (providers removed some data), or for other reasons. The algorithm makes cells but it does not control what is in the cells. You can control the quality of cells in two ways.
 
 The user must be able to filter the bad cells. Several possibilities are available.
 
