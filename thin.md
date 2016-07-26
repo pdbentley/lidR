@@ -11,7 +11,7 @@ The function pulseDensity enable to plot a map of pulse density. In the example 
 
     lidar %>% pulseDensity %>% plot
 
-![](images/pulse.jpg)
+![](images/pulse.png)
 
 ## Thin homogeneously
 
@@ -20,7 +20,7 @@ The thin function by default rasterize the space. For each cell (raster), the pr
     thinned = lidar %>% thin(pulseDensity = 1, resolution = 5)
     thinned %>% pulseDensity %>% plot
     
-![](images/pulse-homogeise-true.jpg)
+![](images/pulse-homogeise-true.png)
 
 In this figure we can observe that the new thinned lidar dataset has now an homogeneous pulse density. In area where the required pulse density is greater than the local pulse density it returns an unchanged set of points (it cannot increase the pulse density).
 
@@ -31,4 +31,4 @@ If the optionnal parameter `homogenize` is set to `FALSE`, the algorithm used to
     thinned = lidar %>% thin(1, homogenize = FALSE)
     thinned %>% pulseDensity %>% plot
     
-![](images/pulse-homogeise-false.jpg)
+![](images/pulse-homogeise-false.png)

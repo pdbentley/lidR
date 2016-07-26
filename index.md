@@ -27,7 +27,7 @@ lidR provides an open-source and R-based implementation of the main functions fr
 - [Filter a cloud of points based on any condition test](extract.html)
 - [Thin a cloud of points to reach an homogeneous point density](thin.html)
 - [Clip data based on discs, rectangles or polygons](clip.html)
-- [Manage a catalog of `.las` tiles](catalog.thml)
+- [Manage a catalog of `.las` tiles](catalog.html)
 - [Extract automatically a set of ground plot inventories (even plots falling between two or more tiles)](catalog.html#extract-a-ground-inventory)
 - [Analyse a full set of tiles in parallel computing](catalog.html)
 - [Plot 3D LiDAR data](plotLidar.html)
