@@ -7,7 +7,7 @@ title: Thin a cloud of point
 
 ## Pulse density
 
-The function pulseDensity enable to plot a map of pulse density. In the example dataset we can observe that the pulse density is not homogeneous due to overlaps and aircraft pitch.
+The function `pulseDensity` enable to plot a map of pulse density. In the example dataset we can observe that the pulse density is not homogeneous due to overlaps and aircraft pitch.
 
     lidar %>% pulseDensity %>% plot
 
@@ -31,4 +31,4 @@ If the optionnal parameter `homogenize` is set to `FALSE`, the algorithm used to
     thinned = lidar %>% thin(1, homogenize = FALSE)
     thinned %>% pulseDensity %>% plot
     
-![](images/pulse-homogeise-false.png)
+![](images/pulse-homogeneise-false.png)
