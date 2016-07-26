@@ -17,6 +17,6 @@ title: Digital model of canopy
 
 ## Resolution
 
-`canopyModel` has an optional parameter `resolution`. The cell size is the square of the resolution.
+`canopyModel` has an optional parameter `resolution`. The cell size is the square of the resolution. Default is 2.
 
-	canopy = canopyModel(lidar, resolution = 4)
+	canopy = canopyModel(lidar, res = 2)

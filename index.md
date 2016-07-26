@@ -33,7 +33,6 @@ lidR provides an open-source and R-based implementation of the main functions fr
 - Analyse a full set of tiles in parallel computing
 - [Plot 3D LiDAR data](plotLidar.html)
 - plot metrics in 2D and 3D
-- Compute a simple triangular irregular network (TIN)
     
 # Some examples
     
