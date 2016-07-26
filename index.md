@@ -11,7 +11,7 @@ lidR provides an open-source and R-based implementation of the main functions fr
 
 # Install lidR from Github with devtools
 
-    install.package("devtools")
+    install.packages("devtools")
     devtools::install_github("Jean-Romain/lidR")
     library(lidR)
     
@@ -25,14 +25,13 @@ lidR provides an open-source and R-based implementation of the main functions fr
 - [Rasterize and apply any function to compute a set of metrics using an area-based approach](gridMetrics.html)
 - [Classify and filter data from geographic shapefiles](classifyFromShapefile.html)
 - [Filter a cloud of points based on any condition test](extract.html)
-- Thin a cloud of points to reach an homogeneous point density
+- [Thin a cloud of points to reach an homogeneous point density](thin.html)
 - [Clip data based on discs, rectangles or polygons](clip.html)
-- Compute point and pulse densities
-- Manage a catalog of `.las` tiles
-- Extract automatically a set of ground plot inventories (even plots falling between two or more tiles)
-- Analyse a full set of tiles in parallel computing
+- [Manage a catalog of `.las` tiles](catalog.thml)
+- [Extract automatically a set of ground plot inventories (even plots falling between two or more tiles)](catalog.html#extract-a-ground-inventory)
+- [Analyse a full set of tiles in parallel computing](catalog.html)
 - [Plot 3D LiDAR data](plotLidar.html)
-- plot metrics in 2D and 3D
+- [plot metrics in 2D and 3D](gridMetrics.html)
     
 # Some examples
     
@@ -72,4 +71,11 @@ lidR provides an open-source and R-based implementation of the main functions fr
     plot(metrics, "hmax")
     plot(metrics, "imean")
     #etc.
+    
+## Manage a catalog
+
+    catalog = Catalog("<Path to a folder containing a set of .las files>")
+    plot(catalog)
+    
+![](images/catalog.png)
 
