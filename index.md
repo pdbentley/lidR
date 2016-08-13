@@ -38,7 +38,7 @@ lidR provides an open-source and R-based implementation of the main functions fr
     
 ## Plot data
 
-	lidar = LoadLidar("myfile.las")
+	lidar = readLAS("myfile.las")
 	plot(lidar)
 
 ![](images/plot3d_1.jpg)

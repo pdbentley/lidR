@@ -10,7 +10,7 @@ The function `classifyFromShapefile` enable the classification of each point fro
     LASfile <- system.file("extdata", "Megaplot.las", package="lidR")
     shapefile_dir <- system.file("extdata", package = "lidR")
     
-    lidar = LoadLidar(LASfile)
+    lidar = readLAS(LASfile)
     lake = rgdal::readOGR(shapefile_dir, "lac_ontario_UTM17")
     
 ## Classify the points
